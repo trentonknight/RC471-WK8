@@ -1,0 +1,63 @@
+% article example for classicthesis.sty
+\documentclass[11pt,a4paper]{scrartcl} % KOMA-Script article 
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage[LabelsAligned]{currvita} % nice cv style
+\usepackage[nochapters]{classicthesis} % nochapters
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usetikzlibrary{calc,shapes,arrows,automata,trees,shadows,decorations.pathmorphing,positioning,
+shapes.misc,shapes.arrows,chains,matrix,scopes,decorations.pathmorphing,backgrounds}
+\renewcommand*{\cvheadingfont}{\LARGE\color{Maroon}}
+\renewcommand*{\cvlistheadingfont}{\large}
+\renewcommand*{\cvlabelfont}{\qquad}
+\begin{document}
+
+%Coverletter
+\begin{cv}{\spacedallcaps{Title}}
+        \begin{cvlist}{\textcolor{brown}{\spacedlowsmallcaps{Jason~N~Mansfield}}}\label{PersDat}  
+            \item   Regis University
+            \item   3333\\
+                    Regis Boulevard Denver \\	
+                    Colorado 80221-1099
+            \item   mansf843@regis.edu\\				
+                    \url{http://www.regis.edu/}				
+        \end{cvlist}
+        \begin{cvlist}{\spacedlowsmallcaps{Class type~Class Number}}\label{irgendwas}
+            \item Instructed by NAME\\
+             \url{http://teachers.site/}
+        \end{cvlist}
+    \end{cv}
+\clearpage
+
+\noindent
+\textcolor{Maroon}{\spacedallcaps{The quoted article title}}\\
+\textcolor{brown}{\spacedlowsmallcaps{paragraph or whatever}}
+\begin{verse}
+
+\end{verse}
+\textcolor{brown}{Quoted article}~\cite{key here}
+\clearpage
+%Title
+\title{\textcolor{Maroon}{\rmfamily\normalfont\spacedallcaps{Title again}}}
+    \author{\textcolor{brown}{\spacedlowsmallcaps{Jason N Mansfield}}}
+    \date{} % no date
+    
+    \maketitle
+    
+    \begin{abstract}
+  
+    \end{abstract}
+       
+    \tableofcontents
+    
+    \section{}
+
+  % bib stuff
+    \nocite{*}
+    \addtocontents{toc}{\protect\vspace{\beforebibskip}}
+    \addcontentsline{toc}{section}{\refname}    
+    \bibliographystyle{plain}
+    \bibliography{cite}
+\end{document}

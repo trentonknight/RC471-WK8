@@ -1,0 +1,3 @@
+\contentsline {section}{\numberline {1}}{3}{section.1}
+\vspace {\beforebibskip }
+\contentsline {section}{References}{3}{section.1}
